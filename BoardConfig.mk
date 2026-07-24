@@ -32,7 +32,7 @@ TARGET_KERNEL_VARIANT_CONFIG := msm8930_loganre_eur_lte_defconfig
 TARGET_KERNEL_SELINUX_CONFIG := selinux_defconfig
 BOARD_CUSTOM_BOOTIMG := true
 LZMA_RAMDISK_TARGETS := recovery
-BOARD_CUSTOM_BOOTIMG_MK := device/samsung/jflte/mkbootimg.mk
+BOARD_CUSTOM_BOOTIMG_MK := device/samsung/loganreltexx/mkbootimg.mk
 
 TARGET_ARCH := arm
 TARGET_CPU_ABI := armeabi-v7a
