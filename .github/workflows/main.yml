@@ -10,7 +10,7 @@ jobs:
       DEVICE: loganreltexx
       BRANCH: twrp-6.0
     steps:
-        - uses: actions/checkout@v5
+        - uses: actions/checkout@v7
         - name: Installing JDK 7 + Build Dependencies
           run: |
             sudo dpkg --add-architecture i386
@@ -62,7 +62,7 @@ jobs:
             export PATH=$OLDPATH
             export JAVA_HOME=$OLDJAVAHOME
         - name: Uploading TWRP builds
-          uses: actions/upload-artifact@v2
+          uses: actions/upload-artifact@v5
           with:
             name: twrp
             path: /home/runner/OFRP/out/target/product/${{ env.DEVICE }}/recovery.*
