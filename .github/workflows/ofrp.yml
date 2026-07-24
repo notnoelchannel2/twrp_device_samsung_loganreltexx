@@ -55,6 +55,24 @@ jobs:
             cd ~/OFRP
             rm -rf ~/OFRP/device/qcom/common
             git clone https://github.com/TeamWin/android_device_qcom_common -b android-6.0 ~/OFRP/device/qcom/common
+            python3 -c '
+            path = "bootable/recovery/abx-functions.hpp"
+            with open(path, "r") as f:
+                lines = f.read().splitlines()
+            
+            last_inc = -1
+            for i, line in enumerate(lines):
+                if line.strip().startswith("#include"):
+                    last_inc = i
+            
+            if last_inc != -1:
+                lines.insert(last_inc + 1, "#include <openssl/evp.h>")
+                with open(path, "w") as f:
+                    f.write("\n".join(lines) + "\n")
+                print("Successfully injected #include <openssl/evp.h> after the last include line.")
+            else:
+                print("Error: No #include lines found.")
+            '
             source build/envsetup.sh
             export ALLOW_MISSING_DEPENDENCIES=true
             export LC_ALL="C"
