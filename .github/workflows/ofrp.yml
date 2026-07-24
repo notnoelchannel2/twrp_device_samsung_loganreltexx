@@ -1,9 +1,9 @@
-name: TWRP CI
+name: OFRP CI
 on:
   workflow_dispatch:
 jobs:
   build:
-    name: TWRP Build CI
+    name: OFRP Build CI
     runs-on: ubuntu-22.04
     env:
       OEM: samsung
