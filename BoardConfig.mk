@@ -66,7 +66,7 @@ BOARD_HARDWARE_CLASS := $(LOCAL_PATH)/cmhw
 
 # TWRP config
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/recovery/twrp.fstab
-TW_THEME := portrait_hdpi
+TW_THEME := portrait_mdpi
 RECOVERY_SDCARD_ON_DATA := true
 TW_INTERNAL_STORAGE_PATH := "/data/media/0"
 TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
@@ -89,8 +89,6 @@ TW_NO_EXFAT_FUSE := false
 TW_NO_EXFAT := false
 TW_EXCLUDE_NANO := true
 TW_EXCLUDE_TZDATA := true
-TW_EXCLUDE_BASH := true
-TW_EXCLUDE_TWRPAPP := true
 TW_EXTRA_LANGUAGES := false
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
 BOARD_HAS_NO_SELECT_BUTTON := true
